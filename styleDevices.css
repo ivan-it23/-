@@ -1,0 +1,628 @@
+/* Общие стили для страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Стили для навигации */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+button {
+    background-color: #e9ecef;
+    color: #495057;
+    border: 1px solid #dee2e6;
+    margin: 0 8px;
+    padding: 8px 16px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.2px;
+}
+
+button:hover {
+    background-color: #dee2e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+button:active {
+    transform: scale(0.98);
+    background-color: #ced4da;
+}
+
+button:focus {
+    outline: 2px solid rgba(108, 117, 125, 0.3);
+    outline-offset: 1px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Стили формы */
+form .auth-form input,
+form .auth-form button {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+/* Стили вкладок */
+.tabs .tab-list {
+    display: flex;
+    gap: 8px;
+    padding: 12px 0;
+    list-style-type: none;
+    margin: 0 0 20px 0;
+    border-bottom: 2px solid #e0e0e0;
+    background: none;
+    box-shadow: none;
+}
+
+/* Стили для вкладок */
+.tabs .tab-item {
+    cursor: pointer;
+    padding: 14px 24px;
+    background-color: #f8f9fa;
+    border-radius: 6px 6px 0 0;
+    color: #495057;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #dee2e6;
+    border-bottom: none;
+    position: relative;
+    margin-bottom: -2px;
+    letter-spacing: 0.3px;
+}
+
+.tabs .tab-item:hover {
+    background-color: #e9ecef;
+    color: #2c3e50;
+    transform: translateY(-2px);
+}
+
+.tabs .tab-item.active {
+    background-color: #ffffff;
+    color: #2c3e50;
+    border-color: #adb5bd;
+    z-index: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tab-pane:not(#tab-1) #deviceList,
+.tab-pane:not(#tab-1) #searchResult,
+.tab-pane:not(#tab-1) #deviceHistory {
+    display: none !important;
+}
+
+.tabs .tab-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #4a8fe7;
+}
+
+.tabs .tab-item:not(:last-child) {
+    border-right: 1px solid #dee2e6;
+}
+
+.tabs .tab-item.active:not(:last-child) {
+    border-right-color: #adb5bd;
+}
+
+.device-info {
+   font-weight: bold;
+   color: red;
+}
+
+.nested-table thead th {
+    background-color: #4a8fe7;
+    color: #ffffff;
+}
+
+
+/* Стили таблицы */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 14px;
+    color: #495057;
+    border: 4px solid #e9ecef;
+}
+
+.data-table th {
+    background-color: #4a8fe7;
+    color: #ffffff;
+    text-align: left;
+    padding: 14px 16px;
+    font-weight: 600;
+    border-bottom: 4px solid #2c6db3;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+.data-table td {
+    padding: 14px 16px;
+    text-align: left;
+    color: #495057;
+    border-bottom: 4px solid #e9ecef;
+    line-height: 1.5;
+    border-right: 4px solid #e9ecef;
+    font-size: 14px;
+}
+
+.data-table th:last-child,
+.data-table td:last-child {
+    border-right: none;
+}
+
+.data-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.data-table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Стили заголовка таблицы */
+.data-table caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #2c3e50;
+    padding: 12px 16px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.tab-title {
+  background-color: #f0f0f0;
+  color: #333; /
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+textarea {
+    font-size: 14px;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: black;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+td textarea {
+    display: block;
+    width: 100%;
+    height: 100%; /* Занимает всю высоту ячейки */
+    box-sizing: border-box; /* Учитываем padding и border в ширине и высоте */
+    margin: 0; /* Убираем внешние отступы */
+}
+
+/* Стили для скрытых вкладок */
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+    .history-section {
+        margin: 20px 0;
+        padding: 15px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .history-subtable {
+        width: 100%;
+        margin: 10px 0;
+        border-collapse: collapse;
+    }
+
+    .history-subtable th,
+    .history-subtable td {
+        padding: 8px;
+        border: 2px solid #ddd;
+        text-align: center;
+    }
+
+    .history-param-title {
+        font-weight: bold;
+        color: #2f7835;
+        margin: 15px 0 5px;
+    }
+
+
+.no-data {
+    color: #666;
+    font-style: italic;
+    padding: 20px;
+    text-align: center;
+}
+
+.error {
+    color: #dc3545;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.history-text-field {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 4px;
+    margin: 10px 0;
+    white-space: pre-wrap;
+}
+
+/* Стили для таблицы истории */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 14px;
+    color: #495057;
+    border: 4px solid #e9ecef;
+}
+
+.history-table th {
+    background-color: #6c757d;
+    color: #ffffff;
+    text-align: left;
+    padding: 14px 16px;
+    font-weight: 600;
+    border-bottom: 4px solid #545b62;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+.history-table td {
+    padding: 14px 16px;
+    text-align: left;
+    color: #495057;
+    border-bottom: 4px solid #e9ecef;
+    line-height: 1.5;
+    border-right: 4px solid #e9ecef;
+    font-size: 14px;
+}
+
+.history-table th:last-child,
+.history-table td:last-child {
+    border-right: none;
+}
+
+.history-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Общие стили для подтаблиц */
+.history-subtable {
+    border: 4px solid #dee2e6;
+    background: #ffffff;
+}
+
+.history-subtable th {
+    background-color: #e9ecef;
+    color: #495057;
+    border-bottom: 4px solid #dee2e6;
+}
+
+.history-subtable td {
+    border-bottom: 4px solid #dee2e6;
+}
+
+
+[style*="display: none"] {
+    display: none !important;
+}
+
+
+/* Заголовок таблицы */
+.table-caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #4a8fe7;
+    color: white;
+    text-align: center;
+}
+
+/* Строка с прибором */
+.device-row {
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Кнопка прибора */
+.device-button {
+    width: 100%;
+    padding: 12px 20px;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    color: #212529;
+    transition: all 0.2s;
+    box-sizing: border-box;
+}
+
+/* Контейнер для информации */
+.device-button span {
+    display: block;
+    margin: 3px 0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.serial {
+    background-color: #e8f5e9;
+    color: black;
+    border: 1px solid #c8e6c9;
+}
+
+.case {
+    background-color: #fff3e0;
+    color: black;
+    border: 1px solid #ffe0b2;
+}
+@media (max-width: 840px) {
+    .device-selection-table {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .device-button {
+        padding: 10px 15px;
+    }
+}
+
+
+
+.tab-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tab-title {
+    margin: 0;
+    font-size: 1.8em;
+    color: #2c3e50;
+}
+
+/* Стили для блока с информацией о приборе */
+.device-info-box {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.device-info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+.device-info-label {
+    font-size: 0.95em;
+    color: black;
+    font-weight: 500;
+}
+
+.device-info-value {
+    font-size: 1.1em;
+    color: #C41E3A;
+    font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+    .tabs .tab-list {
+        flex-wrap: wrap;
+    }
+
+    .tabs .tab-item {
+        flex: 1 1 auto;
+        min-width: 180px;
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+}
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+
+    .modal-content {
+        position: relative;
+        background: white;
+        margin: 2% auto;
+        padding: 20px;
+        width: 90%;
+        max-width: 1000px;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 5px;
+    }
+
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+    }
+
+    .tolerance-table {
+        width: 100%;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+    }
+
+    .tolerance-table th,
+    .tolerance-table td {
+        padding: 8px;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+
+    .tolerance-table input {
+        width: 80px;
+        padding: 4px;
+        margin: 2px;
+    }
+
+    .modal-buttons {
+        margin-top: 20px;
+        text-align: right;
+    }
+
+/* Стиль для ячейки с ошибкой */
+.tolerance-error {
+    background-color: #ffcccc !important;
+    border: 2px solid #ff0000 !important;
+    position: relative;
+}
+
+.tolerance-error .tolerance-tooltip {
+    display: block;
+}
+
+.empty-field {
+    background-color: #fff3cd !important;
+    border-color: #ffeeba !important;
+}
+
+.nested-table td {
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.nested-table input {
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.nested-table input:focus {
+    border-color: #007bff;
+}
+
+.tolerance-good {
+    background-color: #e6ffe6 !important; /* Зелёный фон */
+    border: 2px solid #2ecc71 !important;
+}
+
+.tolerance-bad {
+    background-color: #ffe6e6 !important; /* Красный фон */
+    border: 2px solid #e74c3c !important;
+}
+
+.tolerance-tooltip {
+    position: absolute;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 5px;
+    z-index: 1000;
+    font-size: 12px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.tolerance-cell {
+    padding: 5px;
+}
+
+.tolerance-bad-history {
+    background-color: #ffcccc; /
+}
+
+.tolerance-good-history {
+    background-color: #ccffcc;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.upload-message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Изначально скрываем */
+}
+
+.upload-message.success {
+    color: green;
+    background-color: #e9f9ef;
+    border: 1px solid #b3e5be;
+}
+
+.upload-message.error {
+    color: red;
+    background-color: #f9e9e9;
+    border: 1px solid #e5b3b3;
+}

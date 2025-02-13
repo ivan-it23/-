@@ -1,0 +1,194 @@
+/* Общие стили для страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Стили для навигации */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+button {
+    background-color: #4CAF50; /* Зеленый фон */
+    color: white; /* Белый текст */
+    border: none; /* Без границы */
+    padding: 12px 20px; /* Отступы */
+    font-size: 16px; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    border-radius: 8px; /* Закругленные углы */
+    cursor: pointer; /* Указатель мыши при наведении */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    transition: all 0.3s ease; /* Анимация при наведении */
+}
+
+button:hover {
+    background-color: #45a049; /* Темно-зеленый при наведении */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Увеличение тени */
+    transform: scale(1.02); /* Легкое увеличение кнопки */
+}
+
+button:active {
+    background-color: #3e8e41; /* Ещё темнее при нажатии */
+    transform: scale(1); /* Возврат к изначальному размеру */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Уменьшение тени */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Стили формы */
+form .auth-form input,
+form .auth-form button {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+/* Стили вкладок */
+.tabs .tab-list {
+    display: flex;
+    background-color: #ddd;
+    padding: 10px;
+    list-style-type: none; /* Убираем точки */
+    margin: 0;
+    border-radius: 8px; /* Закругление краёв списка вкладок */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.tabs .tab-item {
+    margin-right: 20px;
+    cursor: pointer;
+    padding: 12px 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    color: black; /* Цвет текста чёрным */
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s; /* Плавные переходы */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень вкладок */
+}
+
+.tabs .tab-item:hover {
+    background-color: #4CAF50; /* Зелёный цвет при наведении */
+    color: white;
+}
+
+.tabs .tab-item.active {
+    background-color: #e53935; /* Красный цвет для активной вкладки */
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Усиление тени */
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+.device-info {
+   font-weight: bold;
+   color: red;
+}
+/* Стили для таблицы */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень таблицы */
+    border-radius: 8px; /* Закругление углов таблицы */
+    overflow: hidden; /* Скрываем углы за границей */
+    font-size: 14px;
+    color: #333;
+}
+
+.data-table th {
+    background-color: #4CAF50; /* Зелёный цвет для заголовков */
+    color: white; /* Белый текст в заголовках */
+    text-align: left;
+    padding: 16px; /* Увеличенные отступы */
+    font-weight: bold;
+    border-bottom: 3px solid #ddd; /* Утолщённая нижняя граница */
+    font-size: 16px; /* Крупный текст для заголовков */
+    text-transform: uppercase; /* Преобразование текста в заглавные */
+}
+
+.data-table td {
+    padding: 16px; /* Увеличенные отступы */
+    text-align: left;
+    color: #555; /* Более мягкий цвет текста */
+    border-bottom: 1px solid #ddd; /* Чёткая линия между строками */
+    line-height: 1.5; /* Увеличенная высота строк */
+}
+
+.data-table th, .data-table td {
+    border-right: 1px solid #ddd; /* Чёткая вертикальная линия */
+}
+
+.data-table th:last-child, .data-table td:last-child {
+    border-right: none; /* Убираем правую границу у последнего столбца */
+}
+
+.data-table tr {
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+.data-table tr:hover {
+    background-color: #f7f7f7; /* Светлый фон при наведении */
+}
+
+textarea {
+    font-size: 14px;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: black; /* Устанавливаем цвет текста чёрным */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+}
+
+/* Стили для скрытых вкладок */
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* Дополнительные стили для таблиц */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Полосатый фон для чётных строк */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Белый фон для нечётных строк */
+}
+
+.data-table caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
